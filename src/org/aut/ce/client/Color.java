@@ -38,6 +38,11 @@ public enum Color {
 
     }
 
+    public static String getColorCodeString(Color color)
+    {
+        return color.colorCodeString;
+    }
+
     public static Color getBackgroundColor(Color textColor)
     {
         return switch (textColor) {
