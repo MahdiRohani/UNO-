@@ -37,4 +37,15 @@ public enum Color {
         WHITE_B.colorCodeString = "\033[107m";
 
     }
+
+    public static Color getBackgroundColor(Color textColor)
+    {
+        return switch (textColor) {
+            case RED -> RED_B;
+            case YELLOW -> YELLOW_B;
+            case GREEN -> GREEN_B;
+            case BLUE -> BLUE_B;
+            default -> BLACK_B;
+        };
+    }
 }
