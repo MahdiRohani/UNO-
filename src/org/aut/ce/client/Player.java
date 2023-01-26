@@ -48,18 +48,20 @@ public class Player extends User {
     }
 
 
-    public Card removeCard(int cardCodeToRemove) {
+    public Card removeCard(int cardCodeToRemove)
+    {
         Card cardToRemove = null;
-        for (Card card : playerCards) {
-            if (card.getCardCode() == cardCodeToRemove) {
+        for (Card card: playerCards)
+        {
+            if (card.getCardCode() == cardCodeToRemove)
+            {
                 cardToRemove = card;
                 break;
             }
         }
 
-        assert cardToRemove != null;
         score -= cardToRemove.getCardScore();
-        playerCards.remove(cardCodeToRemove);
+        playerCards.remove(cardToRemove);
 
         return cardToRemove;
     }
