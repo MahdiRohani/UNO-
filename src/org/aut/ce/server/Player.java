@@ -1,5 +1,7 @@
 package org.aut.ce.server;
 
+import org.aut.ce.common.Card;
+
 import java.util.ArrayList;
 
 public class Player extends User {

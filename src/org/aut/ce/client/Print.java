@@ -1,5 +1,8 @@
 package org.aut.ce.client;
 
+import org.aut.ce.common.Card;
+import org.aut.ce.common.Color;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;

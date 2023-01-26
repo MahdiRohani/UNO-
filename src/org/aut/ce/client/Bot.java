@@ -1,5 +1,7 @@
 package org.aut.ce.client;
 
+import org.aut.ce.common.*;
+
 import java.util.ArrayList;
 import java.util.Random;
 

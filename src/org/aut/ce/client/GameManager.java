@@ -1,5 +1,8 @@
 package org.aut.ce.client;
 
+import org.aut.ce.common.*;
+
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
