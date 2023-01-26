@@ -78,7 +78,7 @@ public class Client {
                         }
 
                         // get the cards to the players
-
+                        GameManager.preparationGameCards();
                         GameManager.distributeCards();
 
                         GameManager.runGame(inputs);
