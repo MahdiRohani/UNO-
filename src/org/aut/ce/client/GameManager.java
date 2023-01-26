@@ -1,10 +1,11 @@
 package org.aut.ce.client;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class GameManager {
+public class GameManager implements Serializable {
 
     private static ArrayList<Card> gameCards = new ArrayList<>();
     private static ArrayList<Player> players = new ArrayList<>();

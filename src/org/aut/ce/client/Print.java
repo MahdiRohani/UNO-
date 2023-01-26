@@ -1,10 +1,11 @@
 package org.aut.ce.client;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Print {
+public class Print implements Serializable {
 
 
     private static final String indent = "\t\t\t      ";
