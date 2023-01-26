@@ -10,12 +10,7 @@ public class Client {
     private static Scanner inputs = new Scanner(System.in);
 
     public static void main(String[] args) {
-        try {
-            Socket socket = new Socket("127.0.0.1", 6000);
-            System.out.println(socket.getInetAddress());
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
+
 
 
 

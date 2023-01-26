@@ -20,7 +20,7 @@ public class WildDraw4Card extends Card{
             case 1, 7 -> Color.getColorCodeString(Color.WHITE) + "•-------•" +
                     Color.getColorCodeString(Color.RESET);
 
-            case 2 -> Color.getColorCodeString(Color.WHITE) + "|+4︎     |" +
+            case 2 -> Color.getColorCodeString(Color.WHITE) + "|+4︎    |" +
                     Color.getColorCodeString(Color.RESET);
 
             case 3, 5 -> Color.getColorCodeString(Color.WHITE) + "|        |" +
@@ -31,7 +31,7 @@ public class WildDraw4Card extends Card{
                     Color.getColorCodeString(Color.YELLOW) + "i " +
                     Color.getColorCodeString(Color.GREEN) + "l " +
                     Color.getColorCodeString(Color.BLUE) + "d" +
-                    Color.getColorCodeString(Color.WHITE) + "|" +
+                    Color.getColorCodeString(Color.WHITE) + " |" +
                     Color.getColorCodeString(Color.RESET);
 
             case 6 -> Color.getColorCodeString(Color.WHITE) + "|      +4|" +

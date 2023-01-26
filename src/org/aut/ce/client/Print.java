@@ -115,11 +115,11 @@ public class Print implements Serializable {
                 System.out.print("\t\b");
                 for (int k = j; (k < j+9) && (k < player.getPlayerCards().size()); k++)
                 {
-                    System.out.print(player.getPlayerCards().get(k).toString() + "  ");
+                    System.out.print(player.getPlayerCards().get(k).toString(i) + "  ");
 
                     if (i == 8)
                         //      space = lenght of the previous line - current line lenght
-                        for(int space =  player.getPlayerCards().get(k).toString().length() - player.getPlayerCards().get(k).toString().length();
+                        for(int space =  player.getPlayerCards().get(k).toString(i-1).length() - player.getPlayerCards().get(k).toString(i).length();
                             space > 0; space--)
                             System.out.print(" ");
                 }
@@ -131,14 +131,14 @@ public class Print implements Serializable {
 
     public static void getPlayerChosenColor()
     {
-        System.out.println("You uesed a wild card. now choose a color ( " + Color.getColorCodeString(Color.BLACK) +
-                Color.getColorCodeString(Color.RED) + " 1 " + Color.getColorCodeString(Color.RESET) +
-                ", " + Color.getColorCodeString(Color.BLACK) +
-                Color.getColorCodeString(Color.YELLOW) + " 2 " + Color.getColorCodeString(Color.RESET) +
-                ", " + Color.getColorCodeString(Color.BLACK) +
-                Color.getColorCodeString(Color.GREEN) + " 3 " + Color.getColorCodeString(Color.RESET) +
-                ", " + Color.getColorCodeString(Color.BLACK) +
-                Color.getColorCodeString(Color.BLUE) + " 4 " + Color.getColorCodeString(Color.RESET) +
+        System.out.println("You uesed a wild card. now choose a color ( " + Color.getColorCodeString(Color.WHITE) +
+                Color.getColorCodeString(Color.RED_B) + " 1 " + Color.getColorCodeString(Color.RESET) +
+                ", " + Color.getColorCodeString(Color.WHITE) +
+                Color.getColorCodeString(Color.YELLOW_B) + " 2 " + Color.getColorCodeString(Color.RESET) +
+                ", " + Color.getColorCodeString(Color.WHITE) +
+                Color.getColorCodeString(Color.GREEN_B) + " 3 " + Color.getColorCodeString(Color.RESET) +
+                ", " + Color.getColorCodeString(Color.WHITE) +
+                Color.getColorCodeString(Color.BLUE_B) + " 4 " + Color.getColorCodeString(Color.RESET) +
                 " ) :   ");
     }
 
@@ -149,7 +149,7 @@ public class Print implements Serializable {
 
         for (int j = 1; j <= 7; j++)
         {
-            System.out.print(indent + "\t\t\b" + theCardOnTheBoard.toString() + "    " + theCardOnTheBoard.toString());
+            System.out.print(indent + "\t\t\b" + theCardOnTheBoard.toString(-j) + "    " + theCardOnTheBoard.toString(j));
             if (j == 2)
                 System.out.print("  table color");
             else if (j > 2 && j < 6)
@@ -162,7 +162,7 @@ public class Print implements Serializable {
 
     public static void getPlayerChoice(Player player)
     {
-        System.out.println("\nhey " + Color.getColorCodeString(Color.BLACK) +
+        System.out.println("\nhey " + Color.getColorCodeString(Color.BLACK_B) +
                 player.getFirstName() + Color.getColorCodeString(Color.RESET) +
                 " choose a Card (enter the code of your choosen card):  ");
     }
@@ -171,7 +171,7 @@ public class Print implements Serializable {
     public static void printScores(ArrayList<Player> players, Scanner finish)
     {
         clear();
-        System.out.print(Color.getColorCodeString(Color.BLACK)  + "\n\n\n\n\n\n\n");
+        System.out.print(Color.getColorCodeString(Color.WHITE)  + "\n\n\n\n\n\n\n");
 
 
         System.out.println(indent + "\b\b\b\b\b\bPlayers  name |  Players  Score         Number Of Players Cards");
