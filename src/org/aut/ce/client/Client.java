@@ -2,12 +2,16 @@ package org.aut.ce.client;
 
 
 
+import org.aut.ce.common.Score;
+
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
     private static Scanner inputs = new Scanner(System.in);
+
 
     public static void main(String[] args) {
 
@@ -15,7 +19,8 @@ public class Client {
 
 
 
-            Print.calibrate(inputs);
+
+        Print.calibrate(inputs);
 
             String holdInput; // hold the input to check that its valid or not
             int numberOfPlayers; // the number of the game players
@@ -80,6 +85,7 @@ public class Client {
 
                         GameManager.runGame(inputs);
 
+
                         // reset the game
                         GameManager.reset();
 
@@ -89,6 +95,9 @@ public class Client {
                         return;
                 }
             }
+
         }
+
+
 
 }

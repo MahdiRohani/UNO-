@@ -19,7 +19,7 @@ public class WildColorCard extends Card {
             case 1, 7 -> Color.getColorCodeString(Color.WHITE) + "•-------•" +
                     Color.getColorCodeString(Color.RESET);
 
-            case 2 -> Color.getColorCodeString(Color.WHITE) + "|W︎      |" +
+            case 2 -> Color.getColorCodeString(Color.WHITE) + "|W︎    |" +
                     Color.getColorCodeString(Color.RESET);
 
             case 3, 5 -> Color.getColorCodeString(Color.WHITE) + "|       |" +
@@ -33,7 +33,7 @@ public class WildColorCard extends Card {
                     Color.getColorCodeString(Color.WHITE) + "|" +
                     Color.getColorCodeString(Color.RESET);
 
-            case 6 -> Color.getColorCodeString(Color.WHITE) + "|       W|" +
+            case 6 -> Color.getColorCodeString(Color.WHITE) + "|      W|" +
                     Color.getColorCodeString(Color.RESET);
 
             case 8 -> Color.getColorCodeString(Color.WHITE) + "code: " + super.getCardCode() +

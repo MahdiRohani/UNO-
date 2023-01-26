@@ -3,7 +3,10 @@ package org.aut.ce.client;
 import org.aut.ce.common.*;
 
 
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -367,6 +370,15 @@ public class GameManager implements Serializable {
         }
 
         sortPlayers();
+        try {
+            Socket socket = new Socket("localhost", 2000);
+            Score score = new Score();
+            Score.getScore(players);
+            ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
+            outputStream.writeObject(score);
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
         Print.printScores(players, inputs);
     }
 
